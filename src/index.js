@@ -21,7 +21,6 @@ function onSearch(evt) {
     countryInfo.innerHTML = '';
 
     const name = searchBox.value.trim();
-    console.log(name);
 
     fetchCountries(name)
     .then(countries => {
@@ -29,7 +28,6 @@ function onSearch(evt) {
         const countOfContries = countries.length;
         
         if (countOfContries === 1){
-            // console.log(countries);
             countryList.innerHTML = '';
             countryInfo.innerHTML = makeCardCountry(countries); 
 
